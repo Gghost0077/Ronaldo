@@ -1,0 +1,20 @@
+{
+  "name": "ronaldo",
+  "version": "1.0.0",
+  "description": "page about some of the best footballers over the years",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gghost0077/Ronaldo.git"
+  },
+  "author": "Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gghost0077/Ronaldo/issues"
+  },
+  "homepage": "https://github.com/Gghost0077/Ronaldo#readme"
+}
