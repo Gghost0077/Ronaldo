@@ -1,12 +1,30 @@
-# Ronaldo vs Messi
-This page is an objective to compare the stats of messi and ronaldos football careers showcasing there achievement and stats.
+# React + TypeScript + Vite
 
-Collaborators working on this page if you guys have and ideas to add to the repository feel free to do so 
-if you guys could also work on putting information up in the site like - 
-- a way to track Ronaldos and Messis stats in real time would be great 
-- possibly some UI tweaks 
-- maybe something to help check if the website is running properly
-- I would like it that the starting page show the players most recent stats, on the left shwoing ronaldos and right messis.
-- you could then click on a button that can lead you to more in depth stats of each of the players 
-- or anyhting else that can help the site 
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
+
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
