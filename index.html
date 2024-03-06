@@ -1,34 +1,51 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!--meta links for site fucntionality-->
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--CSS links-->
+    <!--CSS links to files and w3school css stylesheet-->
     <link href="../client/startbootstrap-stylish-portfolio-gh-pages/css/styles.css" rel="stylesheet" />
     <link href="../client/startbootstrap-stylish-portfolio-gh-pages/css/mystyles.css" rel="stylesheet"/>
-    <link href="https://www.w3schools.com/w3css/3/w3.css" rel="stylesheet">
+    <link href="https://www.w3schools.com/w3css/3/w3.css" rel="stylesheet"/>
     <title>Vite + React + TS</title>
 
   </head>
   <body>
-    
-  </body>
-  <!--Navigation Bar-->
+  
+  <!--Navigation Bar ref code taken from w3schools-->
   <nav class="w3-bar w3-black">
     <a href="#home" class="w3-button w3-bar-item">Home</a>
     <a href="#signup" class="w3-button w3-bar-item">Signup</a>
     <a href="#about" class="w3-button w3-bar-item">About</a>
     <a href="#contact" class="w3-button w3-bar-item">Contact</a>
   </nav>
+  <!--Slideshow refrenced from w3schools-->
   
-  <!--Background Image-->
-  <section class="background_image_first_page">
+  <section>
+    <img class="mySlides" src="../Ronaldo/client/startbootstrap-stylish-portfolio-gh-pages/assets/img/bg-callout.jpg" style="width:100%">
+    <img class="mySlides" src="../Ronaldo/client/startbootstrap-stylish-portfolio-gh-pages/assets/img/goat_image.jpg" style="width:100%">
+    <img class="mySlides" src="../Ronaldo/client/startbootstrap-stylish-portfolio-gh-pages/assets/img/portfolio-3.jpg" style="width:100%">
   </section>
-  
+  </body>
+  <!--Javascript for slideshow-->
+  <script>
+  var myIndex = 0;
+  carousel();
 
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+  }
+  </script>
 
-
-
-
+</body>
 </html>
