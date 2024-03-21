@@ -7,5 +7,7 @@
 - [ ] Create separate info pages for two or more football players
 - [x] Have an initialisable "localhost" server which runs the primary html file
 - [x] Install necessary development packages using node package manager
+- [ ] Login/Signup system
+- [ ] Voting System
 
 _List of objectives subject to change_
