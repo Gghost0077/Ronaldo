@@ -4,8 +4,7 @@ interface NavbarProps {
 
 const Navbar = ({sections}: NavbarProps) => {
     return (
-        <>
-        <nav id="navbar" className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
         <a className="navbar-brand" href="#">Navbar</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +26,6 @@ const Navbar = ({sections}: NavbarProps) => {
             </div>
         </div>
         </nav>
-        </>
     );
 }
 
