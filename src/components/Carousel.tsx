@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 
 interface CarouselProps {
     images: string[];
@@ -14,6 +14,14 @@ const Carousel = ({images}: CarouselProps) => {
     const prevImage = () => {
         activeImage === 0 ? setActiveImage(images.length-1) : setActiveImage(activeImage-1)
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextImage();
+        }, 4000);
+    
+        return () => clearInterval(interval);
+    });
 
     return (
     <div className="carousel slide">
