@@ -8,7 +8,7 @@ const Navbar = ({sections, onOpen}: NavbarProps) => {
         <>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-        <a className="navbar-brand" href="#">Navbar</a>
+        <a className="navbar-brand" href="#">Welcome to The Goat Debate</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" onClick={onOpen}>
             <span className="navbar-toggler-icon" />
         </button>
