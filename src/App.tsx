@@ -16,10 +16,12 @@ function App() {
 
   return (
     <>
+    <div className="sticky-top">
     <Navbar sections={sections} onOpen={() => {
       condensedNavbarVisible === false ? setCondensedNavbarVisible(true) : setCondensedNavbarVisible(false)
     }}/>
     {condensedNavbarVisible && <CondensedNavbar sections={sections} />}
+    </div>
     <section id="Home">
     <Carousel images={images} />
     </section>

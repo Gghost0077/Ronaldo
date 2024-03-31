@@ -4,7 +4,7 @@ interface CondensedNavbarProps {
 
 const CondensedNavbar = ({sections}: CondensedNavbarProps) => {
     return (
-        <div className="list-group sticky-top">
+        <div className="list-group">
             {sections.map((section) => (
                 <a 
                     key={section + "mobile"}

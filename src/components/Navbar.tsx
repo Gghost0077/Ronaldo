@@ -6,7 +6,7 @@ interface NavbarProps {
 const Navbar = ({sections, onOpen}: NavbarProps) => {
     return (
         <>
-        <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
         <a className="navbar-brand" href="#">Navbar</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" onClick={onOpen}>
