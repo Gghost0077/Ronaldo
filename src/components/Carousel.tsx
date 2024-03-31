@@ -1,6 +1,5 @@
 interface CarouselProps {
     images: string[];
-    id: string;
 }
 
 const Carousel = ({images}: CarouselProps) => {

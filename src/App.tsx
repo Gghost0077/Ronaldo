@@ -1,8 +1,12 @@
 import { useState } from 'react'
 import Navbar from "./components/Navbar"
 import Carousel from "./components/Carousel"
+import CondensedNavbar from "./components/CondensedNavbar"
 
 function App() {
+
+  const [condensedNavbarVisible, setCondensedNavbarVisible] = useState(false);
+
   let sections = ["Home", "About", "Stats", "Contact us"]
   let images = [
     "./src/assets/img/goat_image.jpg",
@@ -12,8 +16,13 @@ function App() {
 
   return (
     <>
-    <Navbar sections={sections} />
-    <Carousel id="Home" images={images} />
+    <Navbar sections={sections} onOpen={() => {
+      condensedNavbarVisible === false ? setCondensedNavbarVisible(true) : setCondensedNavbarVisible(false)
+    }}/>
+    {condensedNavbarVisible && <CondensedNavbar sections={sections} />}
+    <section id="Home">
+    <Carousel images={images} />
+    </section>
     </>
   )
 }
