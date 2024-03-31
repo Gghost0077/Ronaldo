@@ -1,13 +1,25 @@
+import {useState} from "react"
+
 interface CarouselProps {
     images: string[];
 }
 
 const Carousel = ({images}: CarouselProps) => {
+    const [activeImage, setActiveImage] = useState(0)
+
+    const nextImage = () => {
+        activeImage === images.length-1 ? setActiveImage(0) : setActiveImage(activeImage+1)
+    }
+
+    const prevImage = () => {
+        activeImage === 0 ? setActiveImage(images.length-1) : setActiveImage(activeImage-1)
+    }
+
     return (
-    <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
+    <div className="carousel slide">
         <div className="carousel-inner">
-            {images.map((image) => (
-                <div key={image} className="carousel-item active">
+            {images.map((image, index) => (
+                <div key={image} className={activeImage === index ? "carousel-item active" : "carousel-item"}>
                     <img 
                         src={image} 
                         className="d-block w-100"
@@ -15,12 +27,12 @@ const Carousel = ({images}: CarouselProps) => {
                 </div>
             ))}
         </div>
-    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <button className="carousel-control-prev" type="button" onClick={prevImage}>
+        <span className="carousel-control-prev-icon"></span>
         <span className="visually-hidden">Previous</span>
     </button>
-    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <button className="carousel-control-next" type="button" data-bs-slide="next" onClick={nextImage}>
+        <span className="carousel-control-next-icon"></span>
         <span className="visually-hidden">Next</span>
     </button>
     </div>
