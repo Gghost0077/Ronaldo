@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Navbar from "./components/Navbar"
 import Carousel from "./components/Carousel"
 import CondensedNavbar from "./components/CondensedNavbar"
+import Login from "./components/Login"
 
 function App() {
 
