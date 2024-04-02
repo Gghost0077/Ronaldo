@@ -1,8 +1,9 @@
 interface CondensedNavbarProps {
     sections: string[];
+    onClick: () => void;
 }
 
-const CondensedNavbar = ({sections}: CondensedNavbarProps) => {
+const CondensedNavbar = ({sections, onClick}: CondensedNavbarProps) => {
     return (
         <div className="list-group">
             {sections.map((section) => (
@@ -10,6 +11,7 @@ const CondensedNavbar = ({sections}: CondensedNavbarProps) => {
                     key={section + "mobile"}
                     className="list-group-item list-group-item-dark list-group-item-action"
                     href={"#" + section}
+                    onClick={onClick}
                 >
                     {section}
                 </a>

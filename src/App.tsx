@@ -15,17 +15,27 @@ function App() {
   ]
 
   return (
-    <>
+    <body className="bg-dark">
+    <header className="bg-dark bg-gradient">
+      <div className="mx-3 text-white">
+        <h2 className="display-6"><i>The GOAT Debate</i></h2>
+      </div>
+    </header>
     <div className="sticky-top">
+
     <Navbar sections={sections} onOpen={() => {
       condensedNavbarVisible === false ? setCondensedNavbarVisible(true) : setCondensedNavbarVisible(false)
     }}/>
-    {condensedNavbarVisible && <CondensedNavbar sections={sections} />}
+    {condensedNavbarVisible && <CondensedNavbar sections={sections} onClick={() => {
+      condensedNavbarVisible && setCondensedNavbarVisible(false)
+      }}/>
+    }
+
     </div>
     <section id="Home">
     <Carousel images={images} />
     </section>
-    </>
+    </body>
   )
 }
 
