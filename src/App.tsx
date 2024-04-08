@@ -14,6 +14,7 @@ function App() {
     "./src/assets/img/messi_home.jpg",
     "./src/assets/img/ronaldo_home.jpg"
   ]
+  let users = [["john", "1234"]]
 
   return (
     <body className="bg-dark">
@@ -35,6 +36,9 @@ function App() {
     </div>
     <section id="Home">
     <Carousel images={images} />
+    </section>
+    <section id="Contact us">
+    <Login storedUsers={users} />
     </section>
     </body>
   )
