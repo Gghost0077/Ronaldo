@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {SetStateAction, useState} from "react"
 
 interface LoginProps {
     storedUsers: string[][];
@@ -10,11 +10,11 @@ const Login = ({storedUsers}: LoginProps) => {
     const [passwordInput, setPasswordInput] = useState("");
     const [hidden, setHidden] = useState("password")
 
-    const handleEmailChange = (event) => {
+    const handleEmailChange = (event: { target: { value: SetStateAction<string>; }; }) => {
         setEmailInput(event.target.value);
     }
 
-    const handlePasswordChange = (event) => {
+    const handlePasswordChange = (event: { target: { value: SetStateAction<string>; }; }) => {
         setPasswordInput(event.target.value)
     }
 
@@ -59,7 +59,7 @@ const Login = ({storedUsers}: LoginProps) => {
                 <label className="form-check-label text-white" htmlFor="exampleCheck1">Show my password</label>
             </div>
 
-            <button type="submit" className="btn btn-primary" onClick={handleSubmission}>Submit</button>
+            <button type="button" className="btn btn-primary" onClick={handleSubmission}>Submit</button>
         </form>
     );
 }
