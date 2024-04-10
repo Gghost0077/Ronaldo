@@ -24,9 +24,15 @@ const Login = ({storedUsers}: LoginProps) => {
     }
 
     return (
-        <form>
-            <div className="mb-3">
-                <label htmlFor="emailInput" className="form-label text-white">Email address</label>
+        <div className="mx-5">
+        <form className="border border-4 rounded-4">
+
+            <div className="row text-white mt-4">
+            <div className="col-5">
+            <h1 className="text-center display-4">Log in</h1>
+
+            <div className="my-3 mx-5">
+                <label htmlFor="emailInput" className="form-label">Email address</label>
                 <input 
                     type="text" 
                     className="form-control" 
@@ -36,8 +42,8 @@ const Login = ({storedUsers}: LoginProps) => {
                 />
             </div>
 
-            <div className="mb-3">
-                <label htmlFor="passwordInput" className="form-label text-white">Password</label>
+            <div className="mb-3 mx-5">
+                <label htmlFor="passwordInput" className="form-label">Password</label>
                 <input 
                     type={hidden} 
                     className="form-control" 
@@ -46,8 +52,18 @@ const Login = ({storedUsers}: LoginProps) => {
                     onChange={handlePasswordChange}
                 />
             </div>
+            </div>
 
-            <div className="mb-3 form-check">
+            <div className="col me-5">
+                <h1 className="display-3"><b><s>No Account,</s> No Problem:</b></h1>
+                <br/>
+                <h5>Sign up today to have your say in the GOAT debate. Its as easy as a two-yard tap-in!</h5>
+                <br/>
+                <h5><a href="#">Click here</a> to create an account!</h5>
+            </div>
+            </div>
+
+            <div className="mb-3 mx-5 form-check">
                 <input 
                     type="checkbox" 
                     className="form-check-input" 
@@ -59,8 +75,9 @@ const Login = ({storedUsers}: LoginProps) => {
                 <label className="form-check-label text-white" htmlFor="exampleCheck1">Show my password</label>
             </div>
 
-            <button type="button" className="btn btn-primary" onClick={handleSubmission}>Submit</button>
+            <button type="button" className="btn btn-primary mx-5 mb-5" onClick={handleSubmission}>Submit</button>
         </form>
+        </div>
     );
 }
 

@@ -8,7 +8,7 @@ function App() {
 
   const [condensedNavbarVisible, setCondensedNavbarVisible] = useState(false);
 
-  let sections = ["Home", "About", "Stats", "Contact us"]
+  let sections = ["Home", "About", "Stats", "Log in"]
   let images = [
     "./src/assets/img/goat_image.jpg",
     "./src/assets/img/messi_home.jpg",
@@ -37,7 +37,7 @@ function App() {
     <section id="Home">
     <Carousel images={images} />
     </section>
-    <section id="Contact us">
+    <section className="p-5" id="Log in">
     <Login storedUsers={users} />
     </section>
     </body>
