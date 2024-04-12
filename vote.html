@@ -13,6 +13,7 @@
 
     <!--style for page-->
     <link href="./src/assets/style.css" rel="stylesheet">
+    <link href="./src/assets/javas.js" rel="java">
 
     <style>
       footer{
@@ -53,25 +54,63 @@
 <div class="container">
   <h2></h2>
   <div class="progress m-5">
-    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-      <span class="sr-only">70%</span>
+    <div id="ronaldo" class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+      <span class="sr-only" id="Rnum">0</span>
     </div>
   </div>
 </div>
 
 <div class="d-grid gap-2 col-6 mx-auto">
-<button type="button" class="btn btn-outline-danger btn-lg btn-block fw-bold">Ronaldo</button>
-<button type="button" class="btn btn-outline-info btn-lg btn-block fw-bold">Messi</button>
+<button type="button" onclick="CR7()" class="btn btn-outline-danger btn-lg btn-block fw-bold">Ronaldo</button>
+<button type="button" onclick="LM10()" class="btn btn-outline-info btn-lg btn-block fw-bold">Messi</button>
 </div>
 <div class="container">
   <div class="progress m-5">
-    <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-      <span class="sr-only">70%</span>
+    <div id="messi" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+      <span class="sr-only" id="Mnum">0</span>
     </div>
   </div>
 </div>
 
-<hr style="height:200px;border:none;color:#333;background-color: rgba(0, 0, 0, 0.6); position:cover; margin:0">
+<script>
+  function CR7()
+  {
+    var el = document.getElementById("ronaldo");
+    var width = parseInt(el.style.width);
+    el.style.width = (width + 1) + "%"
+
+    var el = document.getElementById("messi");
+    var width = parseInt(el.style.width);
+    el.style.width = (width - 1) + "%"
+
+    document.getElementById('Rnum').innerHTML =
+    parseInt(document.getElementById('Rnum').innerHTML)+1;
+  }
+
+  function LM10()
+  {
+    var el = document.getElementById("messi");
+    var width = parseInt(el.style.width);
+    el.style.width = (width + 1) + "%"
+
+    var el = document.getElementById("ronaldo");
+    var width = parseInt(el.style.width);
+    el.style.width = (width - 1) + "%"
+
+    document.getElementById('Mnum').innerHTML =
+    parseInt(document.getElementById('Mnum').innerHTML)+1;
+
+  }
+
+  
+
+
+    
+
+</script>
+
+
+<hr style="height:200px; background-color: rgba(0, 0, 0, 0.6); position:cover; margin:0">
 
 
 </html>
