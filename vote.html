@@ -54,7 +54,7 @@
 <div class="container">
   <h2></h2>
   <div class="progress m-5">
-    <div id="ronaldo" class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+    <div id="ronaldo" class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:0%">
       <span class="sr-only" id="Rnum">0</span>
     </div>
   </div>
@@ -66,39 +66,46 @@
 </div>
 <div class="container">
   <div class="progress m-5">
-    <div id="messi" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+    <div id="messi" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:0%">
       <span class="sr-only" id="Mnum">0</span>
     </div>
   </div>
 </div>
 
 <script>
+  {
+    var ronaldo = document.getElementById("ronaldo");
+    var R = parseInt(ronaldo.style.width);
+    var messi = document.getElementById("messi");
+    var M = parseInt(messi.style.width);
+  }
+
   function CR7()
   {
-    var el = document.getElementById("ronaldo");
-    var width = parseInt(el.style.width);
-    el.style.width = (width + 1) + "%"
+    R = (R + 1);
+    var goat = (R+M);
+    ronaldo.style.width = ((R / goat) * 100) + "%"
+    messi.style.width = (M / goat * 100) + "%"
+    document.getElementById('Rnum').innerHTML = ((ronaldo.style.width) + " / " + (R))
+    document.getElementById('Mnum').innerHTML = ((messi.style.width) + " / " + (M))
+  
 
-    var el = document.getElementById("messi");
-    var width = parseInt(el.style.width);
-    el.style.width = (width - 1) + "%"
-
-    document.getElementById('Rnum').innerHTML =
-    parseInt(document.getElementById('Rnum').innerHTML)+1;
   }
 
   function LM10()
   {
-    var el = document.getElementById("messi");
-    var width = parseInt(el.style.width);
-    el.style.width = (width + 1) + "%"
+    M = (M + 1);
+    var goat = (R+M);
+    messi.style.width = ((M / goat) * 100) + "%"
+    ronaldo.style.width = (R / goat * 100) + "%"
+    document.getElementById('Rnum').innerHTML = ((ronaldo.style.width) + " / " + (R))
+    document.getElementById('Mnum').innerHTML = ((messi.style.width) + " / " + (M))
+ 
 
-    var el = document.getElementById("ronaldo");
-    var width = parseInt(el.style.width);
-    el.style.width = (width - 1) + "%"
 
-    document.getElementById('Mnum').innerHTML =
-    parseInt(document.getElementById('Mnum').innerHTML)+1;
+
+
+
 
   }
 
