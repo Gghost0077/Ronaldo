@@ -61,8 +61,8 @@
 </div>
 
 <div class="d-grid gap-2 col-6 mx-auto">
-<button type="button" onclick="CR7()" class="btn btn-outline-danger btn-lg btn-block fw-bold">Ronaldo</button>
-<button type="button" onclick="LM10()" class="btn btn-outline-info btn-lg btn-block fw-bold">Messi</button>
+<button type="button" onclick="CR7()" class="btn btn-outline-danger btn-lg btn-block fw-bold" id="RB">Ronaldo</button>
+<button type="button" onclick="LM10()" class="btn btn-outline-info btn-lg btn-block fw-bold" id="MB">Messi</button>
 </div>
 <div class="container">
   <div class="progress m-5">
@@ -88,6 +88,12 @@
     messi.style.width = (M / goat * 100) + "%"
     document.getElementById('Rnum').innerHTML = ((ronaldo.style.width) + " / " + (R))
     document.getElementById('Mnum').innerHTML = ((messi.style.width) + " / " + (M))
+    document.getElementById('RB').style.display = 'none'
+    document.getElementById('MB').style.display = 'none'
+
+
+
+
   
 
   }
@@ -100,6 +106,9 @@
     ronaldo.style.width = (R / goat * 100) + "%"
     document.getElementById('Rnum').innerHTML = ((ronaldo.style.width) + " / " + (R))
     document.getElementById('Mnum').innerHTML = ((messi.style.width) + " / " + (M))
+    document.getElementById('RB').style.display = 'none'
+    document.getElementById('MB').style.display = 'none'
+
  
 
 
